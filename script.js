@@ -1,5 +1,10 @@
 console.log("Hello World!");
 
+const playerChoice = getPlayerChoice()
+const computerChoice = getComputerChoice()
+let playerScore = 0
+let computerScore = 0
+
 function getComputerChoice() {
 
     choice = Math.floor(Math.random() * 3 + 1)

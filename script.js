@@ -3,8 +3,13 @@ console.log("Hello World!");
 let playerScore = 0
 let computerScore = 0
 
-function getComputerChoice() {
+function getPlayerChoice() {
+    choice = prompt('Type "Rock", "Paper" or "Scissors": ')
+    return choice
+}
 
+function getComputerChoice() {
+    
     choice = Math.floor(Math.random() * 3 + 1)
     
     if (choice === 1) {
@@ -18,15 +23,10 @@ function getComputerChoice() {
     }
 }
 
-function getPlayerChoice() {
-    choice = prompt('Type "Rock", "Paper" or "Scissors": ')
-    return choice
-}
-
 function playRound(playerSelection, computerSelection) {
-
-    playerChoice = playerSelection
-    computerChoice = computerSelection
+    
+    let playerChoice = playerSelection
+    let computerChoice = computerSelection
     
     if (playerChoice === "rock") {
         if (computerChoice === "rock") {
@@ -77,11 +77,41 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerChoice = getPlayerChoice().toLowerCase()
-let computerChoice = getComputerChoice()
+function playGame() {
+    
+    playerScore = 0
+    computerScore = 0
 
-console.log(playerChoice);
-console.log(computerChoice);
+    for (let round = 0; round < 5; round++) {
 
-round = playRound(playerChoice, computerChoice)
-console.log(round)
+        let playerChoice = getPlayerChoice().toLowerCase()
+        let computerChoice = getComputerChoice()
+
+        console.log(playerChoice);
+        console.log(computerChoice);
+        playRound(playerChoice, computerChoice)
+
+        if (playerScore >= 3) {
+            console.log("You win the game!")
+            break
+        }
+
+        if (computerScore >= 3) {
+            console.log("I, the computer! Win the Game!")
+            break
+        }
+
+        else if (round === 4) {
+            if (playerScore > computerScore) {
+                console.log("You win the game!")
+            }
+            if (computerScore < computerScore) {
+                console.log("I, the computer! Win the Game!")
+            }
+            else
+                console.log("It's a tie! no one wins the game!")
+        }
+    }
+}
+
+playGame()

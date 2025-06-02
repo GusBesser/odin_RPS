@@ -4,7 +4,7 @@ let playerScore = 0
 let computerScore = 0
 
 function getPlayerChoice() {
-    choice = prompt('Type "Rock", "Paper" or "Scissors": ')
+    choice = prompt('Before Starting the Game, please open the Developer Console!\n(Press Ctrl + Shift + C)\n\nType "Rock", "Paper" or "Scissors" in the box below!: ')
     return choice
 }
 
@@ -103,13 +103,13 @@ function playGame() {
 
         else if (round === 4) {
             if (playerScore > computerScore) {
-                console.log("You win the game!")
+                console.log("\nYou win the game!")
             }
             if (computerScore < computerScore) {
-                console.log("I, the computer! Win the Game!")
+                console.log("\nI, the computer! Win the Game!")
             }
             else
-                console.log("It's a tie! no one wins the game!")
+                console.log("\nIt's a tie! no one wins the game!")
         }
     }
 }

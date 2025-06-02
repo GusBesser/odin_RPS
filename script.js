@@ -4,7 +4,7 @@ let playerScore = 0
 let computerScore = 0
 
 function getPlayerChoice() {
-    choice = prompt('Before Starting the Game, please open the Developer Console!\n(Press Ctrl + Shift + C)\nThen reload the page to start the game.\n\nType "Rock", "Paper" or "Scissors" in the box below!: ')
+    choice = prompt('Before Starting the Game, please open the Developer Console!\n(Press Ctrl + Shift + C)\n\nType "Rock", "Paper" or "Scissors" in the box below!: ')
     return choice
 }
 

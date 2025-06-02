@@ -1,0 +1,34 @@
+Initialize score variables
+
+
+Initialize playerChoice function
+    Prompt Player to type Rock, Paper or Scissors
+    No need for error handling
+    returns the String
+Initialize computerChoice function
+    gets a random value between 1 and 3 that 
+    returns a "Rock", "Paper" or "Scissors" String depending on the random number
+
+Initialize startGame function 
+    Check how many rounds have been played, if a player has won >=3 matches, exit and announce winner
+    Else play the game 
+Initialize playRound function
+    Takes playerChoice and computerChoice as parameters and decides the winner with conditionals
+    If playerChoice === Rock 
+        If computerChoice === Rock
+            return console log saying tie
+            Add no points
+        If computerChoice === Paper
+            return console log saying you lose
+            Add point to computer
+        If computerChoice === Scissors
+            return console log saying you win
+            Add point to player
+
+    ETC for other choices...
+
+    
+
+startGame 5 rounds
+
+    

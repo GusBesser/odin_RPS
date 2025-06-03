@@ -105,7 +105,7 @@ function playGame() {
             if (playerScore > computerScore) {
                 console.log("\nYou win the game!")
             }
-            if (computerScore < computerScore) {
+            if (playerScore < computerScore) {
                 console.log("\nI, the computer! Win the Game!")
             }
             else

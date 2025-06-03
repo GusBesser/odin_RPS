@@ -82,7 +82,7 @@ function playGame() {
     playerScore = 0
     computerScore = 0
 
-    for (let round = 0; round < 5; round++) {
+    for (let round = 1; round <= 5; round++) {
 
         let playerChoice = getPlayerChoice().toLowerCase()
         let computerChoice = getComputerChoice()
@@ -90,25 +90,24 @@ function playGame() {
         console.log(playerChoice);
         console.log(computerChoice);
         playRound(playerChoice, computerChoice)
+        console.log(playerScore, "," , computerScore)
 
         if (playerScore >= 3) {
             console.log("You win the game!")
-            break
         }
 
         if (computerScore >= 3) {
             console.log("I, the computer! Win the Game!")
-            break
         }
 
-        else if (round === 4) {
+        else if (round === 5) {
             if (playerScore > computerScore) {
                 console.log("\nYou win the game!")
             }
             if (playerScore < computerScore) {
                 console.log("\nI, the computer! Win the Game!")
             }
-            else
+            else if (playerScore === computerScore)
                 console.log("\nIt's a tie! no one wins the game!")
         }
     }
